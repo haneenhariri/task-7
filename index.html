@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css file  -->
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg  fixed-top navbar-dark bg-dark">
+            <div class="container">
+              <a class="navbar-brand text-warning" href="#">JAVASCRIPT</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+        <div class="hero d-flex justify-content-center align-items-center p-5">
+            <h1>Simple Programs With <span class="text-warning"> JAVASCRIPT </span></h1>
+        </div>
+    </header>
+    <main>
+        <!-- pro 1 -->
+        <section class="pro1 d-flex flex-column bg-dark justify-content-center align-items-center p-5">
+          <h3 class="text-warning">Max Min Number</h3>
+          <h4 class="text-white p-4">Enter 3 integers number</h4>
+          <form action="" class="d-flex flex-column bg-dark justify-content-center align-items-center">
+            <div>
+              <input type="text" class="p-1 m-2" id="num1">
+              <input type="text" class="p-1 m-2" id="num2">
+              <input type="text" class="p-1 m-2" id="num3">
+            </div>
+            <button type="button" class="btn btn-warning m-5" onclick="maxMin()">submit</button>
+          </form>
+          <div class="out d-flex justify-content-center align-items-center">
+            <div class="max m-2">
+              <label for="" class="text-warning">Max Value</label>
+              <h3 class="text-white text-center p-3" id="max"></h3>
+            </div>
+            <div class="min m-2">
+              <label for="" class="text-warning">Min Value</label>
+              <h3 class="text-white text-center p-3" id="min"></h3>
+            </div>
+          </div>
+        </section>
+        <!-- pro 2 -->
+        <section  class="pro1 d-flex flex-column justify-content-center align-items-center p-5">
+          <h3 class="text-dark">Vowel Or Consonant</h3>
+          <h4 class="text-warning p-4">Enter Character</h4>
+          <form class="d-flex flex-column justify-content-center align-items-center">
+            <div>
+              <input type="text" class="p-1 m-1 b-dark" id="char">
+            </div>
+            <button type="button" class="btn btn-warning m-3" onclick="charVC()">submit</button>
+          </form>
+          <div class="out-char d-flex">
+            <h3 class="text-warning p-4">Character is : </h3>
+            <h3 class="text-dark p-4" id="charOut"></h3>
+          </div>
+        </section>
+        <!-- pro 3 -->
+        <section class="pro1 d-flex flex-column bg-dark justify-content-center align-items-center p-5">
+          <h3 class="text-warning">Multiplication</h3>
+          <div class="d-flex justify-content-center align-items-center">
+            <h4 class="text-white p-4">Multiplication Table of :</h4>
+            <form >
+              <input type="text" class="mult text-white text-center fs-3" id="mult">
+              <button id="arrow" type="button" onclick="generate()" ><span>&rarr;</span></button>
+            </form>
+          </div>
+          <div class="result text-white" id="multOut">
+          </div>
+        </section>
+        <!-- pro 4 -->
+        <section  class="pro1 d-flex flex-column justify-content-center align-items-center p-5">
+          <h3 class="text-dark">EVEN Numbers </h3>
+          <form class="d-flex justify-content-center align-items-center">
+            <h4 class="text-warning p-4">Enter Number</h4> 
+            <input type="text" class="p-1 m-1 " id="even">
+            <button type="button" class="btn btn-warning m-3" onclick="evenNum()">submit</button>
+          </form>
+          <div class="outEven d-flex">
+            <h3 class="text-dark p-4">Even number between this number and "1" is : </h3>
+            <h3 class="text-warning p-4" id="evenOut"></h3>
+          </div>
+        </section>
+        <!-- pro 5 -->
+        <section  class="pro1 d-flex flex-column bg-dark justify-content-center align-items-center p-5">
+        <h3 class="text-warning">Enter marks of five subjects</h3>
+        <form class="d-flex flex-column justify-content-center w-100 align-items-start m-5">
+          <div class="d-flex justify-content-between w-100 align-items-center">
+            <label for="" class="text-white w-25 fs-3 m-1">Physics</label>
+            <input type="text" class="p-1 w-25  text-center "  id="mark1">
+          </div>
+          <div class="d-flex justify-content-between w-100 align-items-center">
+            <label for="" class="text-white w-25 fs-3 m-1">Chemistry</label>
+            <input type="text" class="p-1 w-25  text-center " id="mark2">
+            <label for="" class="text-white fs-3 m-1 w-25" ></label>
+          </div>
+          <div class="d-flex justify-content-between w-100 align-items-center">
+            <label for="" class="text-white w-25 fs-3 m-1">Biology</label>
+            <input type="text" class="p-1 w-25 text-center " id="mark3">
+            <label for="" class="text-white fs-3 m-1 w-25" ></label>
+          </div>
+          <div class="d-flex justify-content-between w-100 align-items-center">
+            <label for="" class="text-white fs-3 w-25 m-1">Mathematics</label>
+            <input type="text" class="p-1 w-25 text-center "  id="mark4">
+            <label for="" class="text-white fs-3 m-1 w-25"></label>
+          </div>
+          <div class="d-flex justify-content-between w-100 align-items-center">
+            <label for="" class="text-white w-25 fs-3 m-1">Computer</label>
+            <input type="text" class="mark p-1 w-25  text-center " id="mark5">
+            <label for="" class=" text-white fs-3 m-1 w-25"></label>
+          </div>
+          <button type="button" class="btn btn-warning m-3" onclick="mark()">submit</button>
+        </form>
+        <div class="d-flex w-100 justify-content-evenly">
+          <div>
+            <h3 class="text-warning">total average</h3>
+            <h3 class="text-white text-center " id="totalAvrg"></h3>
+          </div>
+          <div>
+            <h3 class="text-warning">total percentage</h3>
+            <h3 class="text-white text-center" id="totalPer"></h3>
+            <label for="" id="markout" class="text-white fs-3 m-1 w-25"></label>
+          </div>
+        </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./asset/js/script-1.js"></script>
+</body>
+</html>
