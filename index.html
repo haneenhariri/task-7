@@ -17,20 +17,10 @@
                 <span class="navbar-toggler-icon "></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
+
                 <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <input onkeyup="searchData(this.value)" id="searchInput" class="form-control me-2" type="search" placeholder="Search by Title" >
+                  <button onclick="getSearch(this.id)" id="searchTitle" class="btn btn-outline-success" type="submit">Search</button>
                 </form>
               </div>
             </div>
@@ -108,29 +98,26 @@
         <section  class="pro1 d-flex flex-column bg-dark justify-content-center align-items-center p-5">
         <h3 class="text-warning">Enter marks of five subjects</h3>
         <form class="d-flex flex-column justify-content-center w-100 align-items-start m-5">
-          <div class="d-flex justify-content-between w-100 align-items-center">
+          <div class="d-flex justify-content-evenly w-100 align-items-center">
             <label for="" class="text-white w-25 fs-3 m-1">Physics</label>
             <input type="text" class="p-1 w-25  text-center "  id="mark1">
           </div>
-          <div class="d-flex justify-content-between w-100 align-items-center">
+          <div class="d-flex justify-content-evenly w-100 align-items-center">
             <label for="" class="text-white w-25 fs-3 m-1">Chemistry</label>
-            <input type="text" class="p-1 w-25  text-center " id="mark2">
-            <label for="" class="text-white fs-3 m-1 w-25" ></label>
+            <input type="text" class="p-1 w-25  text-center " id="mark2"> 
           </div>
-          <div class="d-flex justify-content-between w-100 align-items-center">
+          <div class="d-flex justify-content-evenly w-100 align-items-center">
             <label for="" class="text-white w-25 fs-3 m-1">Biology</label>
             <input type="text" class="p-1 w-25 text-center " id="mark3">
-            <label for="" class="text-white fs-3 m-1 w-25" ></label>
           </div>
-          <div class="d-flex justify-content-between w-100 align-items-center">
+          <div class="d-flex justify-content-evenly w-100 align-items-center">
             <label for="" class="text-white fs-3 w-25 m-1">Mathematics</label>
             <input type="text" class="p-1 w-25 text-center "  id="mark4">
-            <label for="" class="text-white fs-3 m-1 w-25"></label>
+
           </div>
-          <div class="d-flex justify-content-between w-100 align-items-center">
+          <div class="d-flex justify-content-evenly w-100 align-items-center">
             <label for="" class="text-white w-25 fs-3 m-1">Computer</label>
             <input type="text" class="mark p-1 w-25  text-center " id="mark5">
-            <label for="" class=" text-white fs-3 m-1 w-25"></label>
           </div>
           <button type="button" class="btn btn-warning m-3" onclick="mark()">submit</button>
         </form>
@@ -142,9 +129,9 @@
           <div>
             <h3 class="text-warning">total percentage</h3>
             <h3 class="text-white text-center" id="totalPer"></h3>
-            <label for="" id="markout" class="text-white fs-3 m-1 w-25"></label>
           </div>
         </div>
+        <label for="" id="markout" class="text-white fs-3 m-3"></label>
         </section>
     </main>
     <footer></footer>

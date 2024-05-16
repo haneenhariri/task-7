@@ -91,22 +91,22 @@ function mark(){
         {
            let markPer = arr[i]*100/100;
             if( markPer >= 90)
-                mark.innerHTML += markPer  + "" + "A" 
+                mark.innerHTML += ' ' + markPer  + " " + "A" + " " 
             else if( markPer >= 80)
-                mark.innerHTML += markPer  + "" + "B"
+                mark.innerHTML +='' + markPer  + " " + "B"+ " " 
             else if( markPer >= 70)
-                mark.innerHTML += markPer +"" + "C"
+                mark.innerHTML += ' '+ markPer +" " + "C"+ " " 
             else if( markPer >= 60)
-                mark.innerHTML += markPer  + "" + "D"
+                mark.innerHTML += ' ' + markPer  + " " + "D"+ " " 
             else if(markPer >= 40)
-                mark.innerHTML += markPer  + "" + "A"
+                mark.innerHTML += ' ' + markPer  + " " + "E" +" " 
             else
-                console.log(markPer,"F");
+                mark.innerHTML+=  " " + markPer + " " + "F" +" "
         }
 }   
 
 /* part-2 */
-function img(src,color){
+ function img(src,color){
     let imgC= document.getElementById("change");
     imgC.setAttribute("src",src);
     let bg = document.getElementById("task1");
@@ -116,8 +116,19 @@ function img(src,color){
 
 let icon = document.getElementById("icon");
 let task2 =document.getElementById("task2")
-icon.onclick = function(){
+icon.onclick =function(){
     task2.classList.add('dark-them');
-}
-
+} 
+let according = document.querySelectorAll(".accordion-wrapper .accordion");
+according.forEach((acco) =>{
+    acco.onclick = ()=>{
+        acco.classList.add("active");
+    }
+})
+const star = document.querySelectorAll(".star i");
+star.forEach(item =>{
+    item.addEventListener('click',() =>{
+        item.classList.add("yellow");
+    })
+})
 

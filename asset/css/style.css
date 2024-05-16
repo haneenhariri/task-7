@@ -53,7 +53,7 @@
     background-color: black;
     color: white;
 }
-.accordion
+.accordion-heading
 {
     width: 60%;
     border: none;
@@ -63,19 +63,21 @@
     padding: 20px;
     cursor: pointer;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.description
+.accordion-contant
 {
     width: 60%;
-    display: none;  
+    padding: 15px;
+    display: none;
 }
-.accordion:after
+.accordion-wrapper .accordion.active .accordion-contant
 {
-    content: "\200B ";
-    float: right;
-    font-weight: bold;
-    color: #777;
+    display: block;
 }
+
 .content
 {
     text-align: center;
@@ -135,20 +137,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding:100px 50px ;
     background-color: rgb(8, 11, 41);
     color: white;
     border-radius: 7px;
-    
+}
+.star
+{
+    cursor: pointer;
 }
 .task3 h3 
 {
-    margin-bottom: 20px;
+    margin: 20px;
 }
-.task3 p
-{
-    margin-top: 20px;
-}
-.task3{
-    cursor: pointer;
+
+.star .yellow{
+    color: yellow;
 }
